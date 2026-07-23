@@ -82,8 +82,9 @@ export function Navigation() {
 
             <div className="flex items-center gap-3">
               <a
-                href="/resume.pdf"
+                href="https://drive.google.com/file/d/1AtPt5_U9OTY-vDUhYQ_kpw8ihXHKjMPI/view?usp=sharing"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="px-3.5 py-1.5 text-sm font-semibold text-slate-700 hover:text-slate-900 bg-white border border-slate-300 rounded-lg hover:border-slate-400 hover:bg-slate-50 transition-all shadow-2xs"
               >
                 Resume
