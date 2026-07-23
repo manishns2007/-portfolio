@@ -43,7 +43,7 @@ export function Footer() {
                 </svg>
               </a>
               <a
-                href="https://linkedin.com/in/nsmanish"
+                href="https://linkedin.com/in/n-s-manish007"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="w-9 h-9 flex items-center justify-center rounded-full text-slate-500 hover:text-blue-600 hover:bg-blue-50 transition-colors"

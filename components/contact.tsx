@@ -133,7 +133,7 @@ export function Contact() {
                 </a>
 
                 <a
-                  href="https://linkedin.com/in/nsmanish"
+                  href="https://linkedin.com/in/n-s-manish007"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 px-3.5 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-lg text-xs font-bold transition-all shadow-xs"

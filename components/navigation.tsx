@@ -90,7 +90,7 @@ export function Navigation() {
               </a>
 
               <a
-                href="https://linkedin.com/in/nsmanish"
+                href="https://linkedin.com/in/n-s-manish007"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-sm font-semibold text-slate-600 hover:text-blue-600 transition-colors"

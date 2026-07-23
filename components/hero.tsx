@@ -96,7 +96,7 @@ export function Hero() {
               </a>
 
               <a
-                href="https://linkedin.com/in/nsmanish"
+                href="https://linkedin.com/in/n-s-manish007"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-4 py-2 bg-slate-100 hover:bg-slate-200 text-slate-800 rounded-lg text-xs font-bold border border-slate-200 transition-all"
