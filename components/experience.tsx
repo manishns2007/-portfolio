@@ -12,43 +12,39 @@ export function Experience() {
 
   const experiences = [
     {
-      title: 'Security Operations Center (SOC) Intern',
+      title: 'Security Operations Center Intern',
       company: 'CyArt Tech',
       period: 'May 2026 - Present',
       location: 'Remote',
       description: 'Contributed to the development and security engineering of CyBreach, an enterprise cybersecurity operations platform.',
       responsibilities: [
-        'Analyzed enterprise threat vectors, security workflows, and operational requirements.',
-        'Contributed to backend security controls implementation and attack surface reduction.',
-        'Participated in threat detection policy tuning and API security auditing.',
+        'Contributed to the development of CyBreach, a cybersecurity platform focused on enterprise security operations.',
+        'Analyzed application workflows and participated in improving security controls and backend functionality.',
       ],
       technologies: ['SOC Analytics', 'Vulnerability Assessment', 'API Security', 'Python', 'Docker'],
     },
     {
-      title: 'Open Source Security Contributor',
+      title: 'Open Source Contributor',
       company: 'Elite Coders',
       period: 'Jan 2026 - Present',
       location: 'Remote',
       description: 'Contributing to open-source developer security tools and document management platforms.',
       responsibilities: [
-        'Implemented robust JWT-based authentication & authorization infrastructure.',
-        'Developed secure user registration, session handling, and bcrypt password hashing APIs.',
-        'Audited backend codebase for OWASP Top 10 vulnerabilities.',
+        'Enhanced the security of an open-source document management platform by implementing JWT-based authentication and secure password storage using bcrypt.',
+        'Designed and integrated authentication and authorization mechanisms to protect REST APIs against unauthorized access.',
       ],
-      technologies: ['Node.js', 'Express.js', 'MongoDB', 'JWT', 'bcryptjs', 'Git'],
+      technologies: ['Node.js', 'Express.js', 'MongoDB', 'JWT', 'bcrypt', 'REST APIs'],
     },
     {
-      title: 'Security & Software Contributor',
+      title: 'Founding Builder',
       company: 'OxCode',
       period: 'July 2026 - Present',
       location: 'Remote',
-      description: 'Engineered security utilities and participated in software development initiatives.',
+      description: 'Selected as one of 100 Founding Builders for OxCode through a competitive application process.',
       responsibilities: [
-        'Built secure RESTful APIs with strict input validation and rate-limiting.',
-        'Participated in code reviews focusing on privilege isolation and memory safety.',
-        'Created system administration scripts for automated server policy checks.',
+        'Selected as one of 100 Founding Builders for Ox Code through a competitive application process, recognizing contributions through bug reporting and product feedback.',
       ],
-      technologies: ['Python', 'Linux Systemd', 'REST APIs', 'Bash', 'Git'],
+      technologies: ['Python', 'Bug Reporting', 'Product Feedback', 'API Security'],
     },
   ]
 

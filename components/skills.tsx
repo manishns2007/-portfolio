@@ -12,75 +12,50 @@ export function Skills() {
 
   const skillCategories = [
     {
-      category: 'Offensive Security',
+      category: 'Security',
       icon: ShieldCheck,
       skills: [
-        'Network Pentesting',
-        'Active Directory Security',
-        'Windows Pentesting',
-        'Linux Security & Privilege Escalation',
-        'Kerberoasting & AD Attacks',
-        'Vulnerability Scanning',
-      ],
-    },
-    {
-      category: 'Application Security',
-      icon: Code,
-      skills: [
-        'OWASP Top 10 Auditing',
-        'JWT Auth Infrastructure',
-        'API Rate-Limiting & Sanitization',
-        'Role-Based Access Control (RBAC)',
-        'Secure Password Hashing (bcrypt)',
-        'OAuth 2.0 Integration',
-      ],
-    },
-    {
-      category: 'Digital Forensics',
-      icon: Terminal,
-      skills: [
-        'AI Evidence Extraction',
-        'Timeline Reconstruction',
-        'OCR Document Parsing',
-        'Disk & Log Analysis',
-        'Threat Hunting',
-        'LLM Context Correlation',
-      ],
-    },
-    {
-      category: 'Cloud & DevOps',
-      icon: Cloud,
-      skills: [
-        'Docker Containerization',
-        'Redis Caching',
-        'PostgreSQL Database Architecture',
-        'MongoDB NoSQL',
-        'Linux Systemd Administration',
-        'Git / GitHub Actions',
-      ],
-    },
-    {
-      category: 'Programming Languages',
-      icon: Database,
-      skills: [
-        'Python (FastAPI, Security Tools)',
-        'JavaScript / Node.js (Express)',
-        'C / C++',
-        'Rust (eBPF Utilities)',
-        'PowerShell',
-        'Bash Automation',
+        'Web Application Security',
+        'Network Security',
+        'Active Directory',
+        'Linux Security',
+        'Digital Forensics',
       ],
     },
     {
       category: 'Security Tools',
       icon: Server,
       skills: [
-        'Wireshark & Packet Analysis',
-        'Nmap Network Scanner',
-        'Metasploit Framework',
-        'Burp Suite Pro',
-        'Tesseract OCR',
-        'eBPF Syscall Auditing',
+        'Burp Suite',
+        'Nmap',
+        'Wireshark',
+        'Metasploit',
+        'Gobuster',
+        'ffuf',
+      ],
+    },
+    {
+      category: 'Programming',
+      icon: Code,
+      skills: [
+        'Python',
+        'Java',
+        'SQL',
+        'JavaScript',
+      ],
+    },
+    {
+      category: 'Technologies',
+      icon: Cloud,
+      skills: [
+        'FastAPI',
+        'Docker',
+        'PostgreSQL',
+        'Git',
+        'eBPF',
+        'React',
+        'Celery',
+        'Redis',
       ],
     },
   ]
@@ -126,7 +101,7 @@ export function Skills() {
 
           <motion.div
             variants={containerVariants}
-            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6"
           >
             {skillCategories.map((category, index) => {
               const Icon = category.icon

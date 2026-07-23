@@ -12,40 +12,38 @@ export function Projects() {
 
   const projects = [
     {
-      title: 'Nethra AI',
-      repoName: 'manishns2007/nethra-ai-forensics',
-      subtitle: 'AI-Assisted Digital Forensics Platform',
-      icon: Cpu,
-      description:
-        'An enterprise digital forensics platform automating evidence extraction, entity linkage, timeline reconstruction, and context-aware LLM investigations across disk & network logs.',
-      technologies: ['Python', 'FastAPI', 'PostgreSQL', 'Docker', 'OCR', 'LLMs', 'Redis', 'Tesseract'],
-      achievements: [
-        'Automated digital evidence analysis with LLM-powered context insights',
-        'Integrated multi-language OCR for automated document parsing',
-        'Built secure role-based investigation workflow management',
-        'Scalable containerized microservice backend architecture',
-      ],
-      github: 'https://github.com/manishns2007/NETHRA-AI',
-      demo: 'https://github.com/manishns2007',
-      caseStudy: 'AI-driven forensic parsing & automated entity correlation engine.',
-    },
-    {
       title: 'KernelOps',
       repoName: 'manishns2007/kernel-ops-sec',
-      subtitle: 'Linux Kernel & System Baseline Hardening Security Tool',
+      subtitle: 'Linux Runtime Detection & Response Platform using eBPF',
       icon: Terminal,
       description:
-        'A high-performance security utility for Linux system hardening, eBPF system call auditing, privilege escalation prevention, and automated CIS baseline policy enforcement.',
-      technologies: ['C', 'Rust', 'Linux Kernel', 'eBPF', 'Systemd', 'Bash', 'Docker'],
+        'Developing a Linux runtime security platform that leverages eBPF for kernel-level telemetry collection to monitor process execution, file operations, and network activity. Implements MITRE ATT&CK-aligned threat detection and policy-based response with minimal system overhead.',
+      technologies: ['eBPF', 'C', 'libbpf', 'Rust', 'SQLite', 'Docker', 'Linux'],
       achievements: [
-        'eBPF-based real-time syscall monitoring & process anomaly detection',
-        'Automated CIS Linux benchmark compliance scanning & automated remediations',
-        'Privilege escalation mitigation & system kernel parameter optimization',
-        'Lightweight daemon with zero-overhead runtime resource consumption',
+        'Kernel-level telemetry collection for process execution, file operations & network activity',
+        'MITRE ATT&CK-aligned threat detection and policy-based response engine',
+        'High-performance Linux runtime security platform with minimal system overhead',
       ],
       github: 'https://github.com/manishns2007',
       demo: 'https://github.com/manishns2007',
       caseStudy: 'eBPF system call telemetry & kernel security baseline automation.',
+    },
+    {
+      title: 'Nethra AI',
+      repoName: 'manishns2007/nethra-ai-forensics',
+      subtitle: 'Digital Forensics & Cyber Investigation Platform',
+      icon: Cpu,
+      description:
+        'Built a digital forensics platform for cyber investigations, enabling automated evidence processing, OCR, AI-assisted entity extraction, relationship analysis, and interactive investigation workflows through knowledge graphs and GraphRAG.',
+      technologies: ['FastAPI', 'React', 'PostgreSQL', 'Docker', 'Celery', 'Redis', 'Cytoscape.js'],
+      achievements: [
+        'Automated digital evidence processing and multi-format document OCR parsing',
+        'AI-assisted entity extraction and automated relationship analysis engine',
+        'Interactive investigation workflows with dynamic knowledge graphs & GraphRAG',
+      ],
+      github: 'https://github.com/manishns2007/NETHRA-AI',
+      demo: 'https://github.com/manishns2007',
+      caseStudy: 'AI-driven forensic parsing & automated entity correlation engine.',
     },
   ]
 
