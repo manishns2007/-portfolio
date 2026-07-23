@@ -78,7 +78,8 @@ export function Hero() {
               className="pt-2 flex flex-wrap items-center gap-3"
             >
               <a
-                href="https://drive.google.com/file/d/1AtPt5_U9OTY-vDUhYQ_kpw8ihXHKjMPI/view?usp=sharing"
+                href="https://drive.google.com/uc?export=download&id=1AtPt5_U9OTY-vDUhYQ_kpw8ihXHKjMPI"
+                download="resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-1.5 px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-lg text-xs font-bold transition-all shadow-xs"
