@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Mail, Phone, Share2, GitBranch, MapPin, Send, CheckCircle2, FileText } from 'lucide-react'
+import { Mail, Phone, Share2, GitBranch, MapPin, Send, CheckCircle2, FileText, Loader2 } from 'lucide-react'
 
 export function Contact() {
   const { ref, inView } = useInView({
@@ -11,17 +11,45 @@ export function Contact() {
     threshold: 0.1,
   })
 
+  const [isSubmitting, setIsSubmitting] = useState(false)
   const [formSubmitted, setFormSubmitted] = useState(false)
+  const [errorMessage, setErrorMessage] = useState('')
   const [formData, setFormData] = useState({ name: '', email: '', subject: '', message: '' })
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     if (!formData.name || !formData.email || !formData.message) return
-    setFormSubmitted(true)
-    setTimeout(() => {
-      setFormSubmitted(false)
-      setFormData({ name: '', email: '', subject: '', message: '' })
-    }, 4000)
+    setIsSubmitting(true)
+    setErrorMessage('')
+
+    try {
+      const response = await fetch('https://formsubmit.co/ajax/nsmanish2007@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json',
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          _subject: formData.subject || `New Contact Form Message from ${formData.name}`,
+          message: formData.message,
+          _template: 'table',
+          _captcha: 'false',
+        }),
+      })
+
+      if (response.ok) {
+        setFormSubmitted(true)
+        setFormData({ name: '', email: '', subject: '', message: '' })
+      } else {
+        setErrorMessage('Failed to send message automatically. Please click email link on the left to send directly!')
+      }
+    } catch {
+      setErrorMessage('Failed to send message automatically. Please click email link on the left to send directly!')
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   const contactMethods = [
@@ -230,12 +258,28 @@ export function Contact() {
                       />
                     </div>
 
+                    {errorMessage && (
+                      <p className="text-red-600 text-xs font-semibold bg-red-50 p-2.5 rounded-lg border border-red-200">
+                        {errorMessage}
+                      </p>
+                    )}
+
                     <button
                       type="submit"
-                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-2.5 bg-blue-600 hover:bg-blue-700 text-white font-bold text-xs rounded-lg transition-all shadow-xs cursor-pointer"
+                      disabled={isSubmitting}
+                      className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-6 py-2.5 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-bold text-xs rounded-lg transition-all shadow-xs cursor-pointer disabled:cursor-not-allowed"
                     >
-                      Send Message
-                      <Send className="w-3.5 h-3.5" />
+                      {isSubmitting ? (
+                        <>
+                          <span>Sending Message...</span>
+                          <Loader2 className="w-3.5 h-3.5 animate-spin" />
+                        </>
+                      ) : (
+                        <>
+                          <span>Send Message</span>
+                          <Send className="w-3.5 h-3.5" />
+                        </>
+                      )}
                     </button>
                   </form>
                 )}
