@@ -17,12 +17,12 @@ export function Projects() {
       subtitle: 'Linux Runtime Detection & Response Platform using eBPF',
       icon: Terminal,
       description:
-        'Developing a Linux runtime security platform that leverages eBPF for kernel-level telemetry collection to monitor process execution, file operations, and network activity. Implements MITRE ATT&CK-aligned threat detection and policy-based response with minimal system overhead.',
+        'High-performance Linux runtime detection and response (RDR) engine designed to monitor low-level kernel events and enforce security policies in real time.',
       technologies: ['eBPF', 'C', 'libbpf', 'Rust', 'SQLite', 'Docker', 'Linux'],
       achievements: [
-        'Kernel-level telemetry collection for process execution, file operations & network activity',
-        'MITRE ATT&CK-aligned threat detection and policy-based response engine',
-        'High-performance Linux runtime security platform with minimal system overhead',
+        'Kernel-level telemetry collection for process execution, file I/O & network sockets via eBPF probes',
+        'Rule-based threat engine aligned with MITRE ATT&CK techniques and policy-driven remediation',
+        'Optimized user-space event consumer implemented in C/libbpf and Rust for minimal system overhead',
       ],
       github: 'https://github.com/manishns2007/te',
       demo: 'https://dec-ledger.vercel.app/',
@@ -34,12 +34,12 @@ export function Projects() {
       subtitle: 'Digital Forensics & Cyber Investigation Platform',
       icon: Cpu,
       description:
-        'Built a digital forensics platform for cyber investigations, enabling automated evidence processing, OCR, AI-assisted entity extraction, relationship analysis, and interactive investigation workflows through knowledge graphs and GraphRAG.',
+        'AI-powered digital forensics investigation suite for automated evidence analysis, entity correlation, and threat mapping.',
       technologies: ['FastAPI', 'React', 'PostgreSQL', 'Docker', 'Celery', 'Redis', 'Cytoscape.js'],
       achievements: [
-        'Automated digital evidence processing and multi-format document OCR parsing',
-        'AI-assisted entity extraction and automated relationship analysis engine',
-        'Interactive investigation workflows with dynamic knowledge graphs & GraphRAG',
+        'Multi-format digital evidence ingestion with automated OCR text extraction',
+        'AI-assisted entity extraction & dynamic relationship mapping via Cytoscape.js and GraphRAG',
+        'Distributed asynchronous processing backend powered by FastAPI, Celery, Redis, and PostgreSQL',
       ],
       github: 'https://github.com/manishns2007/NETHRA-AI',
       demo: 'https://nethra-ai-tau.vercel.app/',

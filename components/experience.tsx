@@ -32,13 +32,13 @@ export function Experience() {
       company: 'CyArt Tech',
       period: 'May 2026 - Present',
       location: 'Remote',
-      description: 'Contributed to the development and security engineering of CyBreach, an enterprise cybersecurity operations platform.',
+      description: 'Security engineering and SOC platform development for CyBreach enterprise security operations.',
       responsibilities: [
         {
-          text: 'Contributed to the development of CyBreach, a cybersecurity platform focused on enterprise security operations.',
+          text: 'Engineered core backend modules for CyBreach, focusing on enterprise security operations and threat visibility.',
         },
         {
-          text: 'Analyzed application workflows and participated in improving security controls and backend functionality.',
+          text: 'Audited application workflows, strengthened API security controls, and improved backend data pipelines.',
         },
       ],
       technologies: ['SOC Analytics', 'Vulnerability Assessment', 'API Security', 'Python', 'Docker'],
@@ -48,7 +48,7 @@ export function Experience() {
       company: 'Elite Coders',
       period: 'Jan 2026 - Present',
       location: 'Remote',
-      description: 'Contributing to open-source software projects across security engineering, background worker runtimes, and compiler tooling.',
+      description: 'Active contributor to open-source developer security, background worker runtimes, and compiler tooling.',
       responsibilities: [
         {
           text: 'Implemented JWT-based authentication, middleware, and request validation for CertiVault, an open-source document vault — merged PR tagged security by maintainers.',
@@ -73,10 +73,13 @@ export function Experience() {
       company: 'OxCode',
       period: 'July 2026 - Present',
       location: 'Remote',
-      description: 'Selected as one of 100 Founding Builders for OxCode through a competitive application process.',
+      description: 'Selected as one of 100 Founding Builders for OxCode from a competitive applicant pool.',
       responsibilities: [
         {
-          text: 'Selected as one of 100 Founding Builders for Ox Code through a competitive application process, recognizing contributions through bug reporting and product feedback.',
+          text: 'Evaluated early-stage platform builds, conducting security vulnerability assessments and submitting detailed bug reports.',
+        },
+        {
+          text: 'Collaborated with product teams to refine API endpoints, usability, and developer workflows.',
         },
       ],
       technologies: ['Python', 'Bug Reporting', 'Product Feedback', 'API Security'],
