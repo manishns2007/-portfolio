@@ -13,7 +13,7 @@ export function Projects() {
   const projects = [
     {
       title: 'KernelOps',
-      repoName: 'manishns2007/kernel-ops-sec',
+      repoName: 'manishns2007/te',
       subtitle: 'Linux Runtime Detection & Response Platform using eBPF',
       icon: Terminal,
       description:
@@ -24,13 +24,13 @@ export function Projects() {
         'MITRE ATT&CK-aligned threat detection and policy-based response engine',
         'High-performance Linux runtime security platform with minimal system overhead',
       ],
-      github: 'https://github.com/manishns2007',
-      demo: 'https://github.com/manishns2007',
+      github: 'https://github.com/manishns2007/te',
+      demo: 'https://dec-ledger.vercel.app/',
       caseStudy: 'eBPF system call telemetry & kernel security baseline automation.',
     },
     {
       title: 'Nethra AI',
-      repoName: 'manishns2007/nethra-ai-forensics',
+      repoName: 'manishns2007/NETHRA-AI',
       subtitle: 'Digital Forensics & Cyber Investigation Platform',
       icon: Cpu,
       description:
@@ -42,7 +42,7 @@ export function Projects() {
         'Interactive investigation workflows with dynamic knowledge graphs & GraphRAG',
       ],
       github: 'https://github.com/manishns2007/NETHRA-AI',
-      demo: 'https://github.com/manishns2007',
+      demo: 'https://nethra-ai-tau.vercel.app/',
       caseStudy: 'AI-driven forensic parsing & automated entity correlation engine.',
     },
   ]
