@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { useInView } from 'react-intersection-observer'
-import { Calendar, MapPin, Briefcase } from 'lucide-react'
+import { Calendar, MapPin, Briefcase, GitBranch, ArrowUpRight } from 'lucide-react'
 
 export function Experience() {
   const { ref, inView } = useInView({
@@ -10,7 +10,23 @@ export function Experience() {
     threshold: 0.1,
   })
 
-  const experiences = [
+  interface ResponsibilityItem {
+    text: string
+    prUrl?: string
+    prLabel?: string
+  }
+
+  interface ExperienceItem {
+    title: string
+    company: string
+    period: string
+    location: string
+    description: string
+    responsibilities: ResponsibilityItem[]
+    technologies: string[]
+  }
+
+  const experiences: ExperienceItem[] = [
     {
       title: 'Security Operations Center Intern',
       company: 'CyArt Tech',
@@ -18,8 +34,12 @@ export function Experience() {
       location: 'Remote',
       description: 'Contributed to the development and security engineering of CyBreach, an enterprise cybersecurity operations platform.',
       responsibilities: [
-        'Contributed to the development of CyBreach, a cybersecurity platform focused on enterprise security operations.',
-        'Analyzed application workflows and participated in improving security controls and backend functionality.',
+        {
+          text: 'Contributed to the development of CyBreach, a cybersecurity platform focused on enterprise security operations.',
+        },
+        {
+          text: 'Analyzed application workflows and participated in improving security controls and backend functionality.',
+        },
       ],
       technologies: ['SOC Analytics', 'Vulnerability Assessment', 'API Security', 'Python', 'Docker'],
     },
@@ -28,12 +48,25 @@ export function Experience() {
       company: 'Elite Coders',
       period: 'Jan 2026 - Present',
       location: 'Remote',
-      description: 'Contributing to open-source developer security tools and document management platforms.',
+      description: 'Contributing to open-source software projects across security engineering, background worker runtimes, and compiler tooling.',
       responsibilities: [
-        'Enhanced the security of an open-source document management platform by implementing JWT-based authentication and secure password storage using bcrypt.',
-        'Designed and integrated authentication and authorization mechanisms to protect REST APIs against unauthorized access.',
+        {
+          text: 'Implemented JWT-based authentication, middleware, and request validation for CertiVault, an open-source document vault — merged PR tagged security by maintainers.',
+          prUrl: 'https://github.com/Krishnx21/CertiVault/pull/29',
+          prLabel: 'View PR',
+        },
+        {
+          text: 'Engineered background worker runtime improvements and async task processing for CNTRL (Engineering contribution).',
+          prUrl: 'https://github.com/Omnikon-Org/CNTRL/pull/52',
+          prLabel: 'View PR',
+        },
+        {
+          text: 'Expanded test coverage and test suite execution reliability for JugaadLang (Testing contribution).',
+          prUrl: 'https://github.com/JugaadLang/jugaadlang/pull/79',
+          prLabel: 'View PR',
+        },
       ],
-      technologies: ['Node.js', 'Express.js', 'MongoDB', 'JWT', 'bcrypt', 'REST APIs'],
+      technologies: ['Node.js', 'Express.js', 'TypeScript', 'JWT', 'Testing & CI', 'REST APIs'],
     },
     {
       title: 'Founding Builder',
@@ -42,7 +75,9 @@ export function Experience() {
       location: 'Remote',
       description: 'Selected as one of 100 Founding Builders for OxCode through a competitive application process.',
       responsibilities: [
-        'Selected as one of 100 Founding Builders for Ox Code through a competitive application process, recognizing contributions through bug reporting and product feedback.',
+        {
+          text: 'Selected as one of 100 Founding Builders for Ox Code through a competitive application process, recognizing contributions through bug reporting and product feedback.',
+        },
       ],
       technologies: ['Python', 'Bug Reporting', 'Product Feedback', 'API Security'],
     },
@@ -123,12 +158,26 @@ export function Experience() {
 
                 <p className="text-slate-600 text-sm leading-relaxed mb-3">{exp.description}</p>
 
-                <div className="space-y-2 mb-4">
-                  <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider">Key Responsibilities</h4>
-                  {exp.responsibilities.map((item, rIndex) => (
-                    <div key={rIndex} className="grid grid-cols-[12px_1fr] gap-2 text-xs sm:text-sm text-slate-600 items-start">
-                      <span className="text-blue-600 font-bold text-base leading-none select-none mt-0.5">•</span>
-                      <span className="leading-relaxed">{item}</span>
+                <div className="space-y-3 mb-4">
+                  <h4 className="text-xs font-bold text-slate-900 uppercase tracking-wider">Key Responsibilities &amp; Contributions</h4>
+                  {exp.responsibilities.map((resp, rIndex) => (
+                    <div key={rIndex} className="flex flex-col sm:flex-row sm:items-start justify-between gap-2 text-xs sm:text-sm text-slate-600">
+                      <div className="grid grid-cols-[12px_1fr] gap-2 items-start flex-1">
+                        <span className="text-blue-600 font-bold text-base leading-none select-none mt-0.5">•</span>
+                        <span className="leading-relaxed">{resp.text}</span>
+                      </div>
+                      {resp.prUrl && (
+                        <a
+                          href={resp.prUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-slate-900 hover:bg-blue-600 text-white rounded-md text-xs font-bold transition-colors self-start sm:self-auto flex-shrink-0 ml-5 sm:ml-0 shadow-2xs"
+                        >
+                          <GitBranch className="w-3.5 h-3.5 text-blue-400" />
+                          <span>View PR</span>
+                          <ArrowUpRight className="w-3 h-3 text-slate-400" />
+                        </a>
+                      )}
                     </div>
                   ))}
                 </div>
